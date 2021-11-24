@@ -7,7 +7,7 @@
 const { Client } = require("pg");
 
 async function doDemo() {
-  const client = new Client(); //defaults to localhost
+  const client = new Client({ database: "demos" }); //defaults to localhost
   await client.connect();
 
   //prep the table to a known empty state
